@@ -1,0 +1,40 @@
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+body{
+    background: url(../img/pexels-photo-355328.jpeg) center top fixed;
+    min-height: 1200px;
+    color: #fff;
+}
+.wrapper{
+	max-width: 1200px;
+	margin: auto;
+	padding: 20px;
+}
+.wrapper img{
+	width: 50px;
+	height: auto;
+}
+.qwer{
+	position: absolute;
+	top: 30px;
+	right: 80px;
+}
+.qwer ul li{
+	float: left;
+	list-style-type: none;
+	margin: 20px 30px;
+}
+.qwer ul li a{
+	text-decoration: none;
+	color: #fff;
+    padding: 20px;
+    border: 1px solid transparent;
+    transition: color .5s,border .5s;
+}
+.qwer ul li a:hover{
+    color: #000;
+    border: 1px solid #fff;
+}
