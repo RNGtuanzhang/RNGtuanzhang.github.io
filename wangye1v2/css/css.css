@@ -1,0 +1,100 @@
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+body{
+    background: url(../img/nature-sky-sunset-man.jpeg) center top fixed;
+    min-height: 1200px;
+    color: #FF4500;
+}
+.wrapper{
+	max-width: 1200px;
+	margin: auto;
+	padding: 20px;
+}
+.wrapper img{
+	width: 50px;
+	height: auto;
+}
+.qwer{
+	position: absolute;
+	top: 30px;
+	right: 80px;
+}
+.qwer ul li{
+	float: left;
+	list-style-type: none;
+	margin: 20px 30px;
+}
+.qwer ul li a{
+	text-decoration: none;
+	color: #FF4500;
+    padding: 20px;
+    border: 1px solid transparent;
+    transition: color .5s,border .5s;
+}
+.qwer ul li a:hover{
+    color: #000;
+    border: 1px solid #fff;
+}
+.favContainer ul li{
+	float: left;
+	list-style-type: none;
+    width: 120px;
+    height: 48px;
+    background-color: rgba(0, 191, 255,.5);
+    margin: 10px 20px 10px 0;
+    line-height: 48px;
+    text-align:center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: border-radius .5s,background-color .5s;
+}
+.favContainer ul li:hover{
+	background-color: rgba(0, 191, 255,.8);
+	border-radius: 5px;
+}
+main section .qweContainer{
+	margin-left:25px ;
+}
+.qweContainer figure{
+	float: left;
+}
+ .qweContainer figure a img{
+ 	width:250px;
+ 	-webkit-filter: grayscale(40%); 
+ 	-moz-filter: grayscale(40%);
+ 	-ms-filter: grayscale(40%); 
+	-o-filter: grayscale(40%); 
+	filter: grayscale(40%);
+	filter: gray; 
+	transition: all 0.5s;
+ }
+.qweContainer figure:hover a img{
+	-webkit-filter: grayscale(0); 
+	-moz-filter: grayscale(0); 
+	-ms-filter: grayscale(0); 
+	-o-filter: grayscale(0);
+	filter: grayscale(0); 
+}
+.qweContainer figure figcaption{
+	position:absolute;
+	color: greenyellow;
+	z-index: 2;
+	margin: 23% 35%;
+	opacity: 0;
+	transition: all 0.5s;
+}
+.qweContainer figure:hover figcaption{
+	
+	opacity: 1;
+}
+
+
+
+
+
+
+
+
