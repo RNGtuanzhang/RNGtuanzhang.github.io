@@ -1,0 +1,39 @@
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+body{
+	background-image: url(../img/banner2.jpg);
+}
+a{
+	text-decoration: none;
+}
+header{
+	max-width: 1200px;
+	margin: auto;
+	background: rgba(0,0,0,.1);
+}
+.logo{
+	float: left;
+}
+.logo img,
+.logo span{
+	vertical-align: middle;	
+}
+.logo span{
+	color: #fff;
+	font-size:3em;
+	font-family:  'Dancing Script', cursive;
+}
+header ul li{
+	list-style-type: none;
+	float:right;
+}
+header ul li a{
+	margin: 10px 15px;
+	color: #fff;
+}
+.container{
+	padding: 20px 0;
+}
