@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<style type="text/css">
+		.menuContainer {
+					position: absolute;
+					left: 33%;
+					top: 30%;
+					width: 500px;
+					padding: 3px 2px 2px 10px;
+				}
+				
+				.menu {
+					overflow: hidden;
+				}
+				
+				li {
+					line-height: 18px;
+					font-family: "微软雅黑";
+					color: grey;
+					transition: color 1s;
+					padding-bottom: 10px;
+				}
+				li:hover{
+					color: #1E90FF;
+					cursor: pointer;
+				}
+
+	</style>
+	<body>
+		<div class="menuContainer">
+			<h2>今日热点要闻：</h2>
+			<ul class="menu">
+				<li>习近平举行仪式欢迎冈比亚总统访华  双方举行会谈</li>
+				<li>牢牢把握高质量发展这个根本要求</li>
+				<li>开放透明 同中国合作大有可为  新时代新气象新作为</li>
+				<li>中国经济正在高质量发展轨道上加速 领航新征程</li>
+				<li>世界各大机构上调中国经济增长预期  暖新闻</li>
+				<li>国家“一带一路”官网俄法西阿四语言版本正式上线</li>
+				<li>官方：到2020年建成涉农资金统筹整合长效机制</li>
+				<li>工商总局公布2017年第三批虚假违法广告典型案例</li>
+				<li>国家卫生计生委发文规范疾病应急救助工作</li>
+				<li>前11月空气质量相对较差10城公布：河北6城上榜</li>
+			</ul>
+		</div>
+		<script language="javascript">
+				var n = 3,
+					oMenu = document.querySelector(".menu"),
+					oMenuItem = document.querySelectorAll(".menu li"),
+					runHeight = oMenuItem[0].offsetHeight * n,
+					runFlag = true;
+
+				oMenu.style.height = runHeight + "px";
+				oMenu.innerHTML += oMenu.innerHTML;
+
+				oMenu.addEventListener("mouseover", function() { runFlag = false });
+				oMenu.addEventListener("mouseout", function() { runFlag = true });
+				(function() {
+					var stop = oMenu.scrollTop % runHeight == 0 && !runFlag;
+					if(!stop) {
+						parseInt(oMenu.scrollTop) == parseInt(oMenu.scrollHeight / 2) ? oMenu.scrollTop = 0 : oMenu.scrollTop++;
+					}
+					setTimeout(arguments.callee, oMenu.scrollTop % runHeight == 0 ? 2000 : 10);
+				})();
+			</script>
+
+	</body>
+</html>
