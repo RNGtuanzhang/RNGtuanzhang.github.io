@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<style type="text/css">
+		    body{
+			    margin: 0;
+			    padding: 0;
+			    background-color: #fdf;
+			}
+		    .container{
+			    width: 100%;
+			    min-height: 100%;
+			}
+		    .text{
+				width: 80%;
+				min-height: 600px;
+				margin: 0 auto;
+			}
+			.text p{
+				text-indent: 2em;
+				font-size: 15px;
+			}
+			[data-theme='blue']{
+				background-image: url(img/01.jpg);
+				background-size: 100%;
+				color: darkgoldenrod;
+				border: 4px solid #8C9C47;
+			}
+			[data-theme='green']{
+				background-image: url(img/02.jpg);
+				background-size: 100%;
+				color: #fff;
+				border: 4px solid #ECC60D;
+			}		
+	</style>
+	<body>
+		<div class="container">
+			<button id="blue">NO.1</button>
+			<button id="green">NO.2</button>
+			<div class="text">
+				<p>我是天空里的一片云 </p>
+                <p>偶尔投影在你的波心 </p>
+                <p>你不必讶异</p>                                               
+                <p>更无须欢喜 </p>                                               
+                <p>在转瞬间消灭了踪影 </p>
+                <br />
+                <p>你我相逢在黑夜的海上 </p>                                               
+                <p>你有你的，我有我的，方向</p>                                                
+                <p>你记得也好 </p>                                               
+                <p>最好你忘掉</p>                                                
+                <p>在这交会时互放的光亮</p>                                               
+				
+			</div>
+		</div>
+		<script type="text/javascript">
+			var oBlue=document.getElementById("blue");
+			var oGreen=document.getElementById("green");
+			var oText=document.querySelector(".text");
+
+			var curTheme=localStorage.getItem("theme");
+			
+			if(curTheme!=null){
+				oText.dataset.theme=curTheme;
+			}//可以保留样式，刷新页面之后还是在的
+			localStorage.clear();//清除样式
+			//按钮单击，监听
+			oBlue.addEventListener("click",setTheme);
+			oGreen.addEventListener("click",setTheme);
+			//执行函数
+			function setTheme(){
+				var target=event.target;
+				var id=target.id;
+				console.log(id);
+				oText.dataset.theme=id;
+				localStorage.setItem("theme",id);
+			}
+		</script>
+	</body>
+</html>
